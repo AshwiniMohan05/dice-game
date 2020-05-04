@@ -9,8 +9,10 @@ GAME RULES:
 
 */
 
-var scores, activePlayer, roundScore, dice, gamePlaying;
+var scores, activePlayer, roundScore, gamePlaying;
 init();
+
+
 
 document.querySelector('.btn-roll').addEventListener('click', function() {
     if(gamePlaying){
@@ -29,10 +31,11 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     }else {
         //Next Player
         nextPlayer();
-       
     }
     }
 } )
+
+
 
 document.querySelector('.btn-hold').addEventListener('click', function() {
     if(gamePlaying ){
@@ -56,6 +59,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
   
 });
 
+
+
 function nextPlayer(){
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
@@ -72,7 +77,11 @@ function nextPlayer(){
     document.querySelector('.dice').style.display = 'none'; 
 }
 
+
+
 document.querySelector('.btn-new').addEventListener('click', init);
+
+
 
 function init(){
 
